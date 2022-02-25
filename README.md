@@ -7,7 +7,7 @@ Control and monitor running swarm instances.
 * Larapress Profiles
 
 ## Install
-1. ```composer require ```
+1. ```composer require peynman/larapress-docker-client```
 
 ## Config
 1. Run ```php artisan vendor:publish --tag=larapress-docker-client```

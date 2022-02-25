@@ -2,7 +2,6 @@
 
 namespace Larapress\DockerClient\Providers;
 
-use Illuminate\Broadcasting\BroadcastManager;
 use Illuminate\Support\ServiceProvider;
 
 class PackageServiceProvider extends ServiceProvider
@@ -19,13 +18,13 @@ class PackageServiceProvider extends ServiceProvider
     /**
      * Bootstrap services.
      *
-     * @param  BroadcastManager $broadcastManager
      * @return void
      */
-    public function boot(BroadcastManager $broadcastManager)
+    public function boot()
     {
+        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'larapress-docker-client');
         $this->loadTranslationsFrom(__DIR__.'/../../resources/lang', 'larapress');
-
+        $this->loadRoutesFrom(__DIR__.'/../../routes/docker-client.php');
         $this->publishes([
             __DIR__.'/../../config/docker-client.php' => config_path('larapress/docker-client.php'),
         ], ['config', 'larapress', 'larapress-docker-client']);
