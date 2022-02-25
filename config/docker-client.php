@@ -2,7 +2,8 @@
 
 return [
     'opcache' => [
-        'status-url' => '/admin/opcache-status',
-        'status-view' => 'larapress-docker-client::opcache-status.blade.php',
+        'status_url' => '/admin/opcache-status',
+        'status_view' => 'larapress-docker-client::opcache-status',
+        'view_permission' => 'opcache-status',
     ]
 ];

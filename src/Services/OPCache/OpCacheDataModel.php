@@ -2,6 +2,7 @@
 
 namespace Larapress\DockerClient\Services\OPCache;
 
+define('THOUSAND_SEPARATOR', true);
 
 class OpCacheDataModel
 {
